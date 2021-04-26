@@ -1,0 +1,40 @@
+.working {
+  text-align: center;
+}
+
+.working__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -30px;
+}
+
+.working__item:not(:last-child) {
+  margin-right: 30px;
+  flex-basis: calc((100% - 90px) / 3);
+}
+
+.working__item {
+  position: relative;
+}
+
+.working_text {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  content: "";
+  width: 100%;
+  height: 70px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #fff;
+  background-color: rgba(47, 48, 58, 0.8);
+}

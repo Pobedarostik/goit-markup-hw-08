@@ -1,0 +1,84 @@
+.team {
+  max-width: 1600px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  background: #f5f4fa;
+}
+
+.team__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -30px;
+}
+
+.person {
+  background: #ffffff;
+  max-width: 270px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  border: 1px solid transparent;
+}
+
+.person:not(:last-child) {
+  margin-right: 30px;
+
+  flex-basis: calc((100% - 90px) / 4);
+}
+
+.person__image {
+  margin-bottom: 30px;
+}
+
+.person__name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+  margin-bottom: 10px;
+}
+
+.person__position {
+  font-size: 16px;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+  color: var(--title-color);
+  margin-bottom: 16px;
+}
+
+.personalNetworks {
+  display: inline-flex;
+  margin-bottom: 30px;
+}
+
+.personalNetworks__item + .personalNetworks__item {
+  margin-left: 10px;
+}
+
+.personalNetworks__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #ffffff;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.personalNetworks__icon {
+  fill: #afb1b8;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.personalNetworks__link:hover,
+.personalNetworks__link:focus {
+  background-color: #2196f3;
+}
+.personalNetworks__link:hover .personalNetworks__icon,
+.personalNetworks__link:focus .personalNetworks__icon {
+  fill: #fff;
+}
