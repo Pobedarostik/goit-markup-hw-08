@@ -37,11 +37,23 @@ body {
 }
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .section {
@@ -84,10 +96,18 @@ img {
 
 .header-two-level {
   font-weight: bold;
-  font-size: 36px;
-  line-height: 1.16;
+  font-size: 28px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
+  color: #212121;
   margin-bottom: 50px;
+}
+
+@media screen and (min-width: 1200px) {
+  .header-two-level {
+    font-size: 36px;
+    line-height: 1.16;
+  }
 }
 
 header {
@@ -198,21 +218,41 @@ header {
   margin-right: 50px;
 }
 
+@media screen and (max-width: 747.98px) {
+  .ebt {
+    display: none;
+  }
+}
+
 .cap {
   display: flex;
-  height: 600px;
+  max-height: 600px;
   align-items: center;
   text-align: center;
 }
 
+@media screen and (min-width: 1200px) {
+  .cap {
+    height: 600px;
+  }
+}
+
 .cap__title {
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
+  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--two-main-color);
+  color: #ffffff;
   margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .cap__title {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .cap__button {
@@ -248,20 +288,41 @@ header {
   flex-wrap: wrap;
 }
 
-.features__item:not(:last-child) {
-  margin-right: 30px;
-  flex-basis: calc((100% - 90px) / 4);
+.features__item {
+  margin-bottom: 30px;
 }
 
-.features__item {
-  max-width: 270px;
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .features__item {
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .features__item {
+    max-width: 354px;
+  }
+  .features__item:nth-child(2n + 1) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .features__item {
+    max-width: 270px;
+  }
+  .features__item:not(:last-child) {
+    margin-right: 30px;
+    flex-basis: calc((100% - 90px) / 4);
+  }
 }
 
 .features__img {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 270px;
   height: 120px;
   background: #f5f4fa;
   border-radius: 4px;
@@ -276,6 +337,12 @@ header {
   text-transform: uppercase;
   color: var(--main-text-color);
   margin-bottom: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .features__title {
+    text-align: center;
+  }
 }
 
 .features__text {
@@ -331,23 +398,46 @@ header {
   background: #f5f4fa;
 }
 
-.team__list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -30px;
+@media screen and (min-width: 768px) {
+  .team__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .person {
   background: #ffffff;
-  max-width: 270px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   border: 1px solid transparent;
 }
 
-.person:not(:last-child) {
-  margin-right: 30px;
-  flex-basis: calc((100% - 90px) / 4);
+@media screen and (min-width: 480px) and (max-width: 767.98px) {
+  .person {
+    max-width: 450px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .person {
+    max-width: 354px;
+    margin-bottom: 30px;
+  }
+  .person:nth-child(odd) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .person {
+    max-width: 270px;
+  }
+  .person:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .person__image {
@@ -412,8 +502,14 @@ header {
 .clients__list {
   display: flex;
   flex-wrap: wrap;
-  max-width: 1170px;
-  margin-right: -30px;
+  justify-content: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .clients__list {
+    max-width: 1170px;
+    margin-right: -30px;
+  }
 }
 
 .client-title {
@@ -426,11 +522,11 @@ header {
 }
 
 .client__link {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   width: 170px;
-  height: 90px;
+  height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);

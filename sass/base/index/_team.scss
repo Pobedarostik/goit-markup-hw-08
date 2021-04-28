@@ -7,25 +7,54 @@
 }
 
 .team__list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -30px;
+  // display: flex;
+  // flex-wrap: wrap;
+  // margin-right: -30px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .person {
   background: #ffffff;
-  max-width: 270px;
+  // max-width: 270px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   border: 1px solid transparent;
+
+  @media screen and (min-width: 480px) and (max-width: 767.98px) {
+    max-width: 450px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    max-width: 354px;
+    margin-bottom: 30px;
+
+    &:nth-child(odd) {
+      margin-right: 30px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 270px;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
 }
 
-.person:not(:last-child) {
-  margin-right: 30px;
+// .person:not(:last-child) {
+//   margin-right: 30px;
 
-  flex-basis: calc((100% - 90px) / 4);
-}
+//   flex-basis: calc((100% - 90px) / 4);
+// }
 
 .person__image {
   margin-bottom: 30px;

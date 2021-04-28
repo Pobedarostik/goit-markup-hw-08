@@ -48,3 +48,9 @@
 .menu__item:not(:last-child) {
   margin-right: 50px;
 }
+
+@media screen and (max-width: 747.98px) {
+  .ebt {
+    display: none;
+  }
+}
