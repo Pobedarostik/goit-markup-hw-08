@@ -6,12 +6,25 @@
   color: var(--title-color);
   margin-left: auto;
 
-  display: flex;
+  @media screen and (max-width: 767.98px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 
   .contact__link {
     display: flex;
     align-items: center;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+      margin-bottom: 10px;
+    }
   }
 
   .contact__icon {
@@ -27,6 +40,8 @@
   fill: #2196f3;
 }
 
-.contact__item:not(:last-child) {
-  margin-right: 50px;
+@media screen and (min-width: 1200px) {
+  .contact__item:not(:last-child) {
+    margin-right: 50px;
+  }
 }

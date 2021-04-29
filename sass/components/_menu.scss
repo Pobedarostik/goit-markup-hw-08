@@ -13,6 +13,10 @@
 
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
+
+  @media screen and (max-width: 767.98px) {
+    display: none;
+  }
 }
 
 .menu__link--currentStudio::after {
@@ -47,10 +51,4 @@
 
 .menu__item:not(:last-child) {
   margin-right: 50px;
-}
-
-@media screen and (max-width: 747.98px) {
-  .ebt {
-    display: none;
-  }
 }

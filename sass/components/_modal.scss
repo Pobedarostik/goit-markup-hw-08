@@ -17,6 +17,11 @@
   height: 581px;
   background-color: #fff;
   padding: 40px;
+
+  @media screen and (max-width: 767.98px) {
+    width: 450px;
+    height: 609px;
+  }
 }
 
 .modal__button {
