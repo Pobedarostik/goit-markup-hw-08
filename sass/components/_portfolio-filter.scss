@@ -15,6 +15,11 @@
   }
 }
 
+.portfolioFilter__item {
+  @media screen and (max-width: 767.98px) {
+    margin-bottom: 15px;
+  }
+}
 .portfolioFilter__item:not(:last-child) {
   margin-right: 8px;
 }

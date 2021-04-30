@@ -1,4 +1,6 @@
 header {
+  position: relative;
+
   padding-top: 24px;
   padding-bottom: 14px;
   display: flex;
@@ -13,4 +15,11 @@ header {
 .nav {
   display: flex;
   align-items: center;
+}
+
+.nav {
+  @media screen and (max-width: 767.98px) {
+    width: 100%;
+    justify-content: space-between;
+  }
 }
