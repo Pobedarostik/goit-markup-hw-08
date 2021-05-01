@@ -14,10 +14,13 @@
   background-color: #fff;
 
   &.is-open {
-    // display: block;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    @media screen and (max-width: 767.98px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      z-index: 1;
+    }
   }
 
   font-weight: 500;
