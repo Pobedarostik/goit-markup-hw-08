@@ -12,15 +12,10 @@
   margin-right: -30px;
 }
 
-.working__item {
+.working__item:not(:last-child) {
   margin-right: 30px;
   flex-basis: calc((100% - 90px) / 3);
 }
-
-// .working__item:not(:last-child) {
-//   margin-right: 30px;
-//   flex-basis: calc((100% - 90px) / 3);
-// }
 
 .working__item {
   position: relative;
